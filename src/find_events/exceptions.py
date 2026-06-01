@@ -2,10 +2,11 @@
 class FindEventsError(Exception):
     """Base exception for all find_events errors."""
 
-
 class ArtistNotFoundError(FindEventsError):
     """Raised when the searched artist cannot be found."""
 
-
 class FetchError(FindEventsError):
     """Raised when an HTTP request fails."""
+
+class ParseError(FindEventsError):
+    """Raised when a response cannot be parsed as expected."""
